@@ -38,7 +38,7 @@ var randomImageSource3 = "images/dice" + randomNumber3 + ".png";
 var image3 = document.querySelectorAll("img")[2];
 image3.setAttribute("src", randomImageSource3);
 
-
+var result = [randomNumber1, randomNumber2, randomNumber3];
 
 
 if (randomNumber1 > randomNumber2 && randomNumber1 > randomNumber3) {
@@ -49,8 +49,11 @@ else if (randomNumber2 > randomNumber1 && randomNumber2 > randomNumber3) {
 }
 else if (randomNumber3 > randomNumber1 && randomNumber3 > randomNumber2) {
     document.querySelector("h1").innerHTML = "Beni nyert! 👦🍼";
-} 
+} else if (result.every(r => r === randomNumber1)){
+     document.querySelector("h1").innerHTML = "Mindenki nyert 😻";   
+}
 else {
     document.querySelector("h1").innerHTML = "Dobjatok újra 🤛";   
 };
+
 
