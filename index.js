@@ -44,7 +44,7 @@ image3.setAttribute("src", randomImageSource3);
 if (randomNumber1 > randomNumber2 && randomNumber1 > randomNumber3) {
     document.querySelector("h1").innerHTML = "Bori nyert!👧🦄";
 }
-else if (randomNumber2 > randomNumber1 && randomNumber1 > randomNumber3) {
+else if (randomNumber2 > randomNumber1 && randomNumber2 > randomNumber3) {
     document.querySelector("h1").innerHTML = "Boti nyert! 👦🚜";
 }
 else if (randomNumber3 > randomNumber1 && randomNumber3 > randomNumber2) {
