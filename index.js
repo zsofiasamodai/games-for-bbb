@@ -7,6 +7,20 @@
 //document.querySelectorAll("p")[0].innerHTML = player1;
 //document.querySelectorAll("p")[1].innerHTML = player2;
 
+
+var rollButton = document.querySelector("button");
+
+
+rollButton.addEventListener("click", handleClick);
+
+function handleClick() {
+    rollDice();
+}
+
+
+function rollDice(){
+
+
 //dice1
 
 var randomNumber1 = Math.floor(Math.random() * 6) +1; // 1-6
@@ -16,6 +30,8 @@ var randomDiceImage = "dice" + randomNumber1 + ".png"; // dice1.png - dice6.png
 var randomImageSource = "images/" + randomDiceImage; 
 
 var image1 = document.querySelectorAll("img")[0];
+
+
 
 image1.setAttribute("src", randomImageSource);
 
@@ -41,6 +57,8 @@ image3.setAttribute("src", randomImageSource3);
 var result = [randomNumber1, randomNumber2, randomNumber3];
 
 
+
+
 if (randomNumber1 > randomNumber2 && randomNumber1 > randomNumber3) {
     document.querySelector("h1").innerHTML = "Bori nyert!👧🦄";
 }
@@ -49,11 +67,11 @@ else if (randomNumber2 > randomNumber1 && randomNumber2 > randomNumber3) {
 }
 else if (randomNumber3 > randomNumber1 && randomNumber3 > randomNumber2) {
     document.querySelector("h1").innerHTML = "Beni nyert! 👦🍼";
-} else if (result.every(r => r === randomNumber1)){
-     document.querySelector("h1").innerHTML = "Mindenki nyert 😻";   
+} else if (result.every(r => r === randomNumber1)) {
+    document.querySelector("h1").innerHTML = "Mindenki nyert ^^";   
 }
 else {
     document.querySelector("h1").innerHTML = "Dobjatok újra 🤛";   
 };
 
-
+};
